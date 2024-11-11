@@ -1,6 +1,10 @@
 # News Aggregator API
 
 A Laravel-based REST API for aggregating news from various sources. Built with Laravel 11, Docker, and MySQL.
+3 news api source used are:
+NewsAPI
+Guardian
+NYT
 
 ## Prerequisites
 
