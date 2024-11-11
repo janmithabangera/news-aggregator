@@ -44,7 +44,7 @@ class FetchArticlesJob implements ShouldQueue
         } catch (Exception $e) {
             DB::rollBack();
             Log::error("Error in FetchArticlesJob: " . $e->getMessage());
-            throw $e; // Re-throw to mark job as failed
+            throw $e;
         }
     }
 

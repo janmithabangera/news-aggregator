@@ -84,14 +84,21 @@ docker compose exec app php artisan migrate
 
 docker compose exec app php artisan db:seed
 
-4. **Generate API Documentation**
-
-docker compose exec app php artisan l5-swagger:generate
-
-5. **Run Cache commands**
+4. **Run Cache commands**
 
 docker compose exec app php artisan optimize:clear
-docker compose exec app php artisan optimize
+
+docker compose exec app php artisan config:cache
+
+docker compose exec app php artisan route:cache
+
+docker compose exec app php artisan event:cache
+
+docker compose exec app php artisan view:cache
+
+5. **Generate API Documentation**
+
+docker compose exec app php artisan l5-swagger:generate
 
 ## Running Background Services
 
@@ -143,7 +150,7 @@ http://localhost/api/documentation
 
 - **Articles**
   - GET `/api/articles` - Get all articles and search 
-  - GET `/api/articles/{id}` - Get specific article
+  - GET `/api/articles/{article}` - Get specific article
 
 - **User Preferences**
   - GET `/api/feed` - Get user preferences
