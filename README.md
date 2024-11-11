@@ -27,9 +27,13 @@ git clone https://github.com/janmithabangera/news-aggregator.git
 3. **Create Docker Environment**
 
 Copy example files
+
 cp .env.example .env
+
 cp docker-compose.example.yml docker-compose.yml
+
 Update .env file with these values:
+
 DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_PORT=3306
@@ -49,12 +53,15 @@ DB_PASSWORD=password
 Build containers first time
 
 docker compose build
+
 Start containers
+
 docker compose up -d
 
 3. **Install Dependencies**
 
 Install PHP dependencies
+
 docker compose exec app composer install
 
 
@@ -77,19 +84,25 @@ docker compose exec app php artisan l5-swagger:generate
 1. **Start Queue Worker**
 
 In a new terminal, run queue worker
+
 docker compose exec app php artisan queue:work
 
 
 2. **Start Scheduler**
 
 In another terminal, run scheduler
+
 docker compose exec app php artisan schedule:work
 
 
 3. **Verify Services**
+
 Check queue status
+
 docker compose exec app php artisan queue:status
+
 List scheduled tasks
+
 docker compose exec app php artisan schedule:list
 
 
@@ -125,14 +138,23 @@ http://localhost/api/documentation
 ## Common Commands
 
 Start containers
+
 docker compose up -d
+
 Stop containers
+
 docker compose down
+
 View logs
+
 docker compose logs -f
+
 Run tests
+
 docker compose exec app php artisan test
+
 Clear cache
+
 docker compose exec app php artisan cache:clear
 
 
@@ -141,11 +163,16 @@ docker compose exec app php artisan cache:clear
 1. **Permission Issues**
 
 Fix storage permissions
+
 docker compose exec app chmod -R 777 storage
 
 
 2. **Container Issues**
 Rebuild containers
+
 docker compose down
+
 docker compose build --no-cache
+
 docker compose up -d
+
