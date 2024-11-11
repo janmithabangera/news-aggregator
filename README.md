@@ -35,10 +35,15 @@ cp docker-compose.example.yml docker-compose.yml
 Update .env file with these values:
 
 DB_CONNECTION=mysql
+
 DB_HOST=mysql
+
 DB_PORT=3306
+
 DB_DATABASE=news_aggregator
+
 DB_USERNAME=user
+
 DB_PASSWORD=password
 
 
