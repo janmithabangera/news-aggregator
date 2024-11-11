@@ -140,7 +140,7 @@ class ArticleController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/articles/{articleId}",
+     *     path="/api/articles/{article}",
      *     tags={"Articles"},
      *     summary="Get specific article",
      *     description="Retrieve a specific article by its ID",

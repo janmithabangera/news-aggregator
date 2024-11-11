@@ -28,7 +28,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "example": "technology"
+                            "example": "tech"
                         }
                     },
                     {
@@ -57,7 +57,7 @@
                         "required": false,
                         "schema": {
                             "type": "string",
-                            "example": "newsapi"
+                            "example": "NewsAPI"
                         }
                     },
                     {
@@ -68,7 +68,7 @@
                         "schema": {
                             "type": "string",
                             "format": "date",
-                            "example": "2024-03-15"
+                            "example": "2024-11-11"
                         }
                     },
                     {
@@ -172,14 +172,14 @@
                 ]
             }
         },
-        "/api/articles/{articleId}": {
+        "/api/articles/{article}": {
             "get": {
                 "tags": [
                     "Articles"
                 ],
                 "summary": "Get specific article",
                 "description": "Retrieve a specific article by its ID",
-                "operationId": "1f75031f2efdf1815aa8744011fefb76",
+                "operationId": "c9edf5941b58ea9bac108a4f9fc3ac56",
                 "parameters": [
                     {
                         "name": "article",

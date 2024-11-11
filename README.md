@@ -88,6 +88,11 @@ docker compose exec app php artisan db:seed
 
 docker compose exec app php artisan l5-swagger:generate
 
+5. **Run Cache commands**
+
+docker compose exec app php artisan optimize:clear
+docker compose exec app php artisan optimize
+
 ## Running Background Services
 
 1. **Start Queue Worker**

@@ -16,7 +16,7 @@ Route::middleware('auth:sanctum')->group(function () {
     });
      // Article routes
      Route::get('/articles', [ArticleController::class, 'index']);
-     Route::get('/articles/{articleId}', [ArticleController::class, 'show']);
+     Route::get('/articles/{article}', [ArticleController::class, 'show']);
 
      // User preferences routes
      Route::post('/preferences', [UserPreferenceController::class, 'store']);
