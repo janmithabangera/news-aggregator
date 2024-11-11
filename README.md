@@ -80,7 +80,11 @@ docker compose exec app php artisan key:generate
 
 docker compose exec app php artisan migrate
 
-3. **Generate API Documentation**
+3. **Seed the database**
+
+docker compose exec app php artisan db:seed
+
+4. **Generate API Documentation**
 
 docker compose exec app php artisan l5-swagger:generate
 
